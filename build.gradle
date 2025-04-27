@@ -1,0 +1,40 @@
+plugins {
+    id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'java'
+}
+
+group = 'com.blaze'
+version = '1.0.0'
+sourceCompatibility = JavaVersion.VERSION_17
+
+minecraft {
+    version = "1.21.4-47.1.0"
+    mappings channel: 'official', version: '23.1.23'
+    runs {
+        client {
+            workingDirectory project.file('run')
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.21.4-47.1.0'
+}
+
+jar {
+    manifest {
+        attributes(
+            'FMLModType': 'GAMELOGIC',
+            'Specification-Title': 'CarMod',
+            'Specification-Vendor': 'Blaze',
+            'Specification-Version': version,
+            'Implementation-Title': project.name,
+            'Implementation-Version': version,
+            'Implementation-Vendor': 'Blaze'
+        )
+    }
+}

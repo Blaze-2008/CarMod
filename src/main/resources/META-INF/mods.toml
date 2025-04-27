@@ -1,0 +1,12 @@
+modLoader="neo-forge"
+loaderVersion="[47,)"
+license="MIT"
+[[mods]]
+  modId="carmod"
+  version="1.0.0"
+  displayName="Blaze's Car Mod"
+  description='''
+    Мод добавляет машину, которую можно крафтить на специальном верстаке,
+    ездить, тонуть в воде и чинить двигателем кликом.
+  '''
+  authors="Blaze"
